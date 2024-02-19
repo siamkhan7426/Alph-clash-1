@@ -1,12 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwind css link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- DaisyUI Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <title>Alph Project</title>
-</head>
-<body>
-    
-</body>
+    <!-- tailwind customizing code -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body >
+        <main class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center">
+            <!-- Home Screen Star  -->
+            <section id="home-screen" class=" min-h-screen text-white flex flex-col justify-center items-center ">
+               <div class=" flex flex-col items-center gap-10">
+                <h1 class="text-8xl font-extrabold uppercase ">Alpha Clash Pro</h1>
+                <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+                <button onclick="paly ()" class="btn text-black text-2xl text-center">Play Now</button>
+               </div>
+            </section>
+             <!-- Home Screen End -->
+
+            <!-- playground Star -->
+            <section id="play-ground" class=" hidden">
+                <div class=" flex flex-col items-center justify-center gap-20 pt-20 ">
+                    <!-- Screen -->
+                    
+                    <div class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313CC] bg-[#FFFFFFB3] ">
+                        <div class=" flex justify-center items-center " >
+                            <p class=" text-white  bg-[#2F2941] px-6 pb-4 rounded-b-xl ">Don't watch keyboard  while playing...</p>
+                        </div>
+                        <div class="flex justify-center items-center h-full">
+                            <p class=" text-9xl font-extrabold text-[#010313] "> Y </p>
+                        </div>
+                    </div>
+                   
+                    <!-- Keyboard star -->
+                    <div class=" keyboard">
+                        <div class="flex justify-center gap-1 my-1 w-full">
+                            <kbd class="kbd">q</kbd>
+                            <kbd class="kbd">w</kbd>
+                            <kbd class="kbd">e</kbd>
+                            <kbd class="kbd">r</kbd>
+                            <kbd class="kbd">t</kbd>
+                            <kbd class="kbd">y</kbd>
+                            <kbd class="kbd">u</kbd>
+                            <kbd class="kbd">i</kbd>
+                            <kbd class="kbd">o</kbd>
+                            <kbd class="kbd">p</kbd>
+                          </div> 
+                          <div class="flex justify-center gap-1 my-1 w-full">
+                            <kbd class="kbd">a</kbd>
+                            <kbd class="kbd">s</kbd>
+                            <kbd class="kbd">d</kbd>
+                            <kbd class="kbd">f</kbd>
+                            <kbd class="kbd">g</kbd>
+                            <kbd class="kbd">h</kbd>
+                            <kbd class="kbd">j</kbd>
+                            <kbd class="kbd">k</kbd>
+                            <kbd class="kbd">l</kbd>
+                          </div> 
+                          <div class="flex justify-center gap-1 my-1 w-full">
+                            <kbd class="kbd">z</kbd>
+                            <kbd class="kbd">x</kbd>
+                            <kbd class="kbd">c</kbd>
+                            <kbd class="kbd">v</kbd>
+                            <kbd class="kbd">b</kbd>
+                            <kbd class="kbd">n</kbd>
+                            <kbd class="kbd">m</kbd>
+                            <kbd class="kbd">/</kbd>
+                          </div>
+                    </div>
+                    <!-- Keyboard end -->
+                    <!-- Like Score  -->
+                    <div class=" flex  justify-between w-3/4  pb-20">
+                        <button class="btn rounded-full bg-[#894189]  text-white px-4">
+                            Life
+                            <img src="/images/heart.svg" alt="">
+                            <span>1</span>
+                          </button>
+                        <button class="btn  rounded-full bg-[#360490]  text-white  px-4">
+                            Score
+                            <img  src="/images/score dolar.svg" alt="">
+                            <span>1</span>
+                          </button>
+                    </div>
+                    
+                </div>
+            </section>
+             <!-- playground end -->
+
+             <!-- Final Score Star -->
+            <section class="score flex justify-center items-center  min-h-screen hidden">
+                 <div class=" text-white text-center space-y-6 bg-[#FFFFFF33] p-4 rounded-lg">
+                <h1 class="text-8xl">
+                    <span class=" font-bold ">Score : </span>
+                    <span>14</span>
+                </h1>
+                <button class="btn">Play Agin </button>
+                <p>Practice will make you a Pro</p>
+            </div>
+            </section>
+            <!-- Final Score End -->
+            
+        </main>
+  </body>
+  <script src="/scripts/ulity.js"></script>
+  <script src="/scripts/alph-class.js"></script>
 </html>
